@@ -16,7 +16,7 @@ to_clear(){
 case "$1" in 
     "add")
         if ! grep -q "^$2" "$FILE"; then
-            echo "$2", $(date) >> $FILE
+            echo "$2", "$(date) ">> $FILE
             echo "You just added another task"
         else 
         echo "This task already exist."
@@ -39,7 +39,7 @@ case "$1" in
     "-h")
         echo "You are required to input two arguments after ($0)"
         echo "  ============== " 
-        echo "The default input format is: $0 {add "Shopping"|list|del 2}"
+        echo "The default input format is: $0 {add Shopping|list|del 2}"
     ;;
     *)
         echo "Wrong format of arguments. Use $0 -h to see guides on the usage. "
