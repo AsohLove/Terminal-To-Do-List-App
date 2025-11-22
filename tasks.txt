@@ -1,5 +1,6 @@
 JUMPING
 Buy Milk
-Swimming
-Complete project
-Sleep now
+Finish Homework
+Go swimming
+Watch football
+Code bash
