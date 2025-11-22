@@ -2,6 +2,11 @@
 
 FILE="tasks.txt"
 
+to_clear(){
+    clear
+    echo "Terminal cleared"
+}
+
     #This checks to confirm that an argument is provided
     if [[ -z "$1" ]]; then
         echo "Wrong input, Usage : $0 <argument> <argument>"
@@ -10,7 +15,12 @@ FILE="tasks.txt"
     # Runs when the first argument($1) is provided and is correct
 case "$1" in 
     "add")
-    echo "$2" >>$FILE
+        if ! grep -q "^$2" "$FILE"; then
+            echo "$2", $(date) >> $FILE
+            echo "You just added another task"
+        else 
+        echo "This task already exist."
+        fi
     ;;
     "list")
     cat -n tasks.txt
@@ -22,16 +32,17 @@ case "$1" in
         else 
             echo "The $FILE contains only one line."
         fi
-
-    
+    ;;
+    "clear")
+    to_clear
     ;;
     "-h")
         echo "You are required to input two arguments after ($0)"
         echo "  ============== " 
-        echo "The default way is as follows: $0 {add "Shopping"|list|del 2}"
+        echo "The default input format is: $0 {add "Shopping"|list|del 2}"
     ;;
     *)
-        echo "Wrong arguments for "
+        echo "Wrong format of arguments. Use $0 -h to see guides on the usage. "
         exit 1
         ;;
 
