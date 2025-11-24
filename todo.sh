@@ -8,14 +8,11 @@ GREEN='\033[0;32m'
 arg1=$1
 arg2=$2
 
-to_clear(){
-    clear
-    echo "Terminal cleared"
-}
 
     #This checks to confirm that an argument is provided
     if [[ -z "$arg1" ]]; then
-        echo -e "${RED}Wrong input, Usage : $0 <argument> <argument>"
+        echo -e "${RED} You have provided the wrong input, The correct Usage is the script name along with two arguments
+        \nfor adding a task: ./todo.sh <add> <task>. For example; .todo.sh <add> <Do laundry>"
         exit 1
     fi
 
@@ -25,7 +22,9 @@ case "$arg1" in
         if ! grep -q "^$arg2" "$FILE"; then
             echo "$arg2, $(date "+%Y-%m-%d %H:%M:%S")" >> $FILE
             echo -e "${GREEN}You just added another task"
-        else 
+        elif [[ $# -lt 2 ]]; then
+            echo "The usage for adding task is (./todo.sh <add> <task>. For example; $0 <add> <Go shopping>)"
+        else
             echo -e "${RED}This task already exist."
         fi
     ;;
@@ -49,18 +48,15 @@ case "$arg1" in
         fi
     ;;
     "clear")
-        # Calling a function that clears the terminal screen
-        to_clear
-    ;;
-    "-h")
-        echo "You are required to input two arguments after ($0)"
-        echo "  ============== " 
-        echo "The default input format is: $0 {add Shopping|list|del 2}"
+        # Clears the tasks file by redirection
+        > $FILE
+
     ;;
     *)
         # Output when wrong arguments are entered
-        echo -e "${RED}Wrong format of arguments. Use $0 -h to see guides on the usage. "
-        exit 1
+            echo -e "To run this program smoothly, you are required to provide at most two arguments after the script name.
+                  \nUsage: (./todo.sh <add> <Buy Milk>), (.todo.sh <del> <2>) and (./todo.sh <list>)"
+            exit 1
         ;;
 
 esac
