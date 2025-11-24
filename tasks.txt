@@ -1,7 +1,6 @@
-Buy Milk, Sat 22 Nov 2025 02:48:15 AM WAT
-Finish Homework, Sat 22 Nov 2025 02:49:08 AM WAT
-Code bash projects, Sat 22 Nov 2025 02:49:27 AM WAT
-Watch football, Sat 22 Nov 2025 02:49:53 AM WAT
-Attend Rebase Code Camp, Sat 22 Nov 2025 02:50:34 AM WAT
-Practice basketball, Sat 22 Nov 2025 03:21:38 AM WAT 
-Go Shopping, Sat 22 Nov 2025 09:10:31 AM WAT 
+Buy Milk, 2025-11-24 08:01:31
+Watch basketball, 2025-11-24 08:03:03
+Compete in a hackathon, 2025-11-24 08:03:32
+Finish homework, 2025-11-24 08:14:38
+Attend Rebase Code Camp, 2025-11-24 08:15:20
+Go golfing, 2025-11-24 08:15:41
