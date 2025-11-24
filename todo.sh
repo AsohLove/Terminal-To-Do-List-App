@@ -18,6 +18,7 @@ to_clear(){
         echo -e "${RED}Wrong input, Usage : $0 <argument> <argument>"
         exit 1
     fi
+
 case "$arg1" in 
     # Verify that a task does not yet exist in the file and then append it otherwise state that it already exist.
     "add")
@@ -42,7 +43,7 @@ case "$arg1" in
             sed -i '2d' $FILE
             echo -e "${GREEN}The second task of $FILE has been successfully deleted!"
         elif [[ $arg2 -ne 2 ]]; then
-            echo "Your second argument should be 2"
+            echo -e "${RED}Your second argument should be 2"
         else 
             echo -e "${RED}The $FILE contains only one line."
         fi
