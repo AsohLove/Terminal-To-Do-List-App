@@ -21,7 +21,7 @@ to_clear(){
 case "$arg1" in 
     "add")
         if ! grep -q "^$arg2" "$FILE"; then
-            echo "$arg2", $(date "+%Y-%m-%d %H:%M:%S") >> $FILE
+            echo "$arg2, $(date "+%Y-%m-%d %H:%M:%S")" >> $FILE
             echo -e "${GREEN}You just added another task"
         else 
         echo -e "${RED}This task already exist."
