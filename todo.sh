@@ -49,7 +49,7 @@ case "$arg1" in
     ;;
     "clear")
         # Clears the tasks file by redirection
-        > $FILE
+        : > $FILE
 
     ;;
     *)
