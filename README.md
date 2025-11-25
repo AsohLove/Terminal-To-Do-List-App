@@ -1,11 +1,12 @@
 # Terminal To-Do List Application
 
-This is command-line To-Do List application built using bash that can add tasks. delete a task and also list tasks in the file(**tasks.txt)**
+This is command-line To-Do List application built using bash that can add tasks. delete a task and also list tasks in a file(**tasks.txt)**
 
 ## Program Description
-The following are some functionalities of running this program;
+The following are some functionalities for running this program;
 
-**Add tasks to the file** 
+**Add tasks to the file**
+
 ```bash
 "add")
         if ! grep -q "^$arg2" "$FILE"; then
@@ -17,13 +18,14 @@ The following are some functionalities of running this program;
             echo -e "${RED}This task already exist."
         fi
 ```
-Running todo.sh add "Go shopping" on the program we get the following output;
+Running *todo.sh add "Go shopping"* on the program, we get the following output;
 ![Adding tasks](/Screenshots/TodoAdd.png)
 
 ![Added tasks](/Screenshots/AddedTask.png)
 
 
 **Delete task fro the file**
+
 ```bash
 "del")
         #Checks if the tasks file has more than two lines and then delete the 2nd line or display error
@@ -37,6 +39,7 @@ Running todo.sh add "Go shopping" on the program we get the following output;
         fi
 ```
 **List the tasks in the file**
+
 ```bash
   "list")
         # Checks if the tasks file exist, then displays its content or provides an error message
@@ -46,20 +49,21 @@ Running todo.sh add "Go shopping" on the program we get the following output;
             echo "The tasks file you are trying to display is nonexistent"
         fi
 ```
-Running *todo.sh* list on the program we get the following output;
+Running *todo.sh list* on the program we get the following output;
 ![Listing tasks](/Screenshots/TodoList.png)
 
+
 ## Clone project
-To get a local copy of this project, you can clone it at the following link 
+To get a local copy of this project, you can clone it at the following link.
 
 ## Author
 
 Love Asoh
 
 - GitHub: [@LoveAsoh](https://github.com/AsohLove)
-- Twitter: [@LoveAsoh](https://twitter.com/loveasoh)
-- LinkedIn: [Love Asoh](https://www.linkedin.com/in/loveasoh/)
+- Twitter: [@LoveAsoh](https://x.com/LoveTheModifier)
+- LinkedIn: [Love Asoh](https://www.linkedin.com/in/asohlove/)
 
 
-## License 
+## License
 This project is [MIT](./LICENSE) licensed.
