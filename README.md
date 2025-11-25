@@ -1,6 +1,6 @@
 # Terminal To-Do List Application
 
-This is command line To-Do List application built using bash that can add tasks. delete a task and also list tasks in the file(**tasks.txt)**
+This is command-line To-Do List application built using bash that can add tasks. delete a task and also list tasks in the file(**tasks.txt)**
 
 ## Program Description
 The following are some functionalities of running this program;
